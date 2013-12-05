@@ -10,6 +10,12 @@ MAINTAINER Nicky nicky.gurbani@gmail.com
 
 
 RUN RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive apt-get install -y wget mysql-server
+<<<<<<< HEAD
+=======
+ADD run.sh /usr/local/bin/run
+RUN chmod +x /usr/local/bin/run
+>>>>>>> 6a04c2c8dd212fe7f7713c79e606dc87b7b556f2
+
 
 RUN sed -i 's/^bind-address.*/bind-address = 0.0.0.0/' /etc/mysql/my.cnf
 RUN /usr/bin/mysqld_safe &
