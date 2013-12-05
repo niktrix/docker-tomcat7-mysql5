@@ -13,7 +13,7 @@ RUN RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive apt-get install -y wget mysql-serv
 
 RUN sed -i 's/^bind-address.*/bind-address = 0.0.0.0/' /etc/mysql/my.cnf
 RUN /usr/bin/mysqld_safe &
-sleep 15
+RUN sleep 15
 RUN mysqladmin -u root password password
 
 
